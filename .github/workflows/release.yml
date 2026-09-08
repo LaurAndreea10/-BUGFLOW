@@ -21,8 +21,8 @@ jobs:
           if gh release view v9.0.0 >/dev/null 2>&1; then
             echo "v9.0.0 already exists"
           else
-            gh release create v9.0.0 --target "$GITHUB_SHA" --title "BUGFLOW v9.0.0 — Production Studio" --notes-file - <<'EOF'
-          BUGFLOW v9 introduces the Production Center, graph analysis, smart share links, local collaboration, accessible presentation, command palette, new Mermaid starters, mobile tools, CodeQL, Dependabot, axe, Playwright, and Lighthouse automation.
-
-          The app remains free, local-first, bilingual, accessible, installable, and compatible with GitHub Pages.
-          EOF
+            printf '%s\n\n%s\n' \
+              'BUGFLOW v9 introduces the Production Center, graph analysis, smart share links, local collaboration, accessible presentation, command palette, new Mermaid starters, mobile tools, CodeQL, Dependabot, axe, Playwright, and Lighthouse automation.' \
+              'The app remains free, local-first, bilingual, accessible, installable, and compatible with GitHub Pages.' > release-notes.md
+            gh release create v9.0.0 --target "$GITHUB_SHA" --title "BUGFLOW v9.0.0 — Production Studio" --notes-file release-notes.md
+          fi
