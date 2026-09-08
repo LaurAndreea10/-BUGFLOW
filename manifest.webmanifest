@@ -1,7 +1,7 @@
 {
   "name": "Bugflow Mermaid Studio",
   "short_name": "Bugflow",
-  "description": "Design, connect, validate, and export Mermaid diagrams in a visual offline studio.",
+  "description": "A local-first visual Mermaid studio for building, reviewing, presenting, and exporting production diagrams.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#0b1020",
@@ -53,6 +53,19 @@
           "type": "image/svg+xml"
         }
       ]
+    },
+    {
+      "name": "Production tools",
+      "short_name": "Tools",
+      "description": "Analyze, compare, present, and share diagrams",
+      "url": "./#pro-center",
+      "icons": [
+        {
+          "src": "icon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
     }
   ],
   "categories": [
@@ -60,5 +73,27 @@
     "developer",
     "education"
   ],
-  "lang": "en"
+  "lang": "en",
+  "share_target": {
+    "action": "./",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "file_handlers": [
+    {
+      "action": "./#studio-editor",
+      "accept": {
+        "text/plain": [
+          ".mmd",
+          ".mermaid",
+          ".md",
+          ".txt"
+        ]
+      }
+    }
+  ]
 }
