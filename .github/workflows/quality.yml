@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: {node-version: 22}
-      - run: npm install --no-save @playwright/test http-server
+      - run: npm install --no-save @playwright/test @axe-core/playwright http-server
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test
   lighthouse:
