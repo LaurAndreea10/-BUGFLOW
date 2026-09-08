@@ -29,6 +29,17 @@ An interactive, accessible Mermaid diagram studio that combines a guided bug-rep
 - English/Romanian interface, light/dark theme, high contrast, text scaling, easy-read font, and reduced motion
 - Local autosave, keyboard shortcuts, XP/badges, and installable offline PWA
 
+## Version 9 highlights
+
+- Production center with command palette and mobile action dock
+- Graph analysis for orphan nodes, dead ends, and cycles
+- Smart compressed share links, local comments, read-only and presentation modes
+- Find/replace, snapshot comparison, and generated Markdown documentation
+- Keyboard-operable SVG nodes with quick label editing
+- Kanban, Sankey, Architecture, Radar, Treemap, and Requirement starters
+- Grid, color-safe palette, and optional LaurAi export branding
+- CodeQL, Dependabot, axe accessibility checks, Playwright, and Lighthouse CI
+
 ## Version 8 highlights
 
 - Click-to-connect handles directly on rendered Flow Forge nodes
