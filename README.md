@@ -1,43 +1,78 @@
-Bugflow — The Life of a Bug Report
+# BUGFLOW — Mermaid Studio Pro
 
-An interactive and accessible Mermaid flowchart for following a bug report from intake to deployment.
+An interactive, accessible Mermaid diagram studio that combines a guided bug-report simulation, practical templates, a live editor, exports, project management, and offline support.
 
-Features
+[![Live Demo](https://img.shields.io/badge/Live-GitHub%20Pages-2563eb?style=for-the-badge&logo=github)](https://laurandreea10.github.io/-BUGFLOW/)
+![Accessibility](https://img.shields.io/badge/Accessibility-first-0a8f68?style=for-the-badge)
+![PWA](https://img.shields.io/badge/PWA-offline-ca91ff?style=for-the-badge)
 
-Guided Yes/No incident simulation
+## Live demo
 
-Live progress, loop count, and activity log
+**https://laurandreea10.github.io/-BUGFLOW/**
 
-English and Romanian interface
+## Highlights
 
-Light and dark themes
+- Interactive “Life of a Bug Report” decision flow
+- Sequence, state, Gantt, Git Graph, ER, journey, timeline, mind map, class, pie, and quadrant diagrams
+- 12 searchable templates for development, CRM, marketing, planning, and data
+- Live Mermaid editor with debounce, error feedback, undo/redo, formatting, zoom, fit, and fullscreen
+- Multi-project workspace with create, rename, duplicate, delete, import, and JSON backup
+- Local text-to-diagram assistant
+- SVG, PNG, WebP, HTML, PDF, and `.mmd` export
+- Accessible text summaries and speech output
+- English/Romanian interface, light/dark theme, high contrast, text scaling, easy-read font, and reduced motion
+- Local autosave, keyboard shortcuts, XP/badges, and installable offline PWA
 
-Responsive layout and reduced-motion support
+## Project structure
 
-Semantic controls and screen-reader status updates
+```text
+-BUGFLOW/
+├── index.html
+├── style.css
+├── app.js
+├── manifest.webmanifest
+├── sw.js
+├── icon.svg
+├── robots.txt
+├── sitemap.xml
+├── CHANGELOG.md
+├── LICENSE
+└── README.md
+```
 
-Sequence, state, Gantt, and Git graph examples
+## Run locally
 
-Copyable Mermaid source for every example
+No build step is required. Open `index.html` through a local static server.
 
-Debounced live Mermaid editor with error feedback
+```bash
+python -m http.server 8000
+```
 
-Searchable library of 12 practical templates
+Then visit `http://localhost:8000`.
 
-Undo/redo history, formatting, keyboard shortcuts, and local autosave
+## Keyboard shortcuts
 
-SVG, PNG, Mermaid source export, Web Share, zoom, fit, and fullscreen
+- `Ctrl/Cmd + S` — save the current project
+- `Ctrl/Cmd + Z` — undo
+- `Ctrl/Cmd + Shift + Z` — redo
+- `Esc` — close accessibility settings
 
-Accessibility control panel with text scaling, contrast, easy-read font, and reduced motion
+## Accessibility
 
-Installable offline PWA with cached core assets
+BUGFLOW uses semantic controls, visible focus states, a skip link, ARIA live regions, keyboard navigation, high-contrast and reduced-motion modes, scalable text, textual diagram summaries, and speech output.
 
-Multi-project workspace with rename, duplicate, delete, import, and JSON backup
+## Privacy
 
-Local text-to-diagram assistant and accessible diagram summaries
+Projects, preferences, drafts, and progress are stored locally in the browser. No account or analytics service is required.
 
-Speech output, node search, WebP/HTML/PDF export, and print layout
+## Version history
 
-Local XP, render counters, and progressive badges
+See [CHANGELOG.md](CHANGELOG.md).
 
-The site is a dependency-free static build; Mermaid is loaded as an ES module.
+## Author
+
+Created by **Laura Andreea Plugaru / LaurAi** as a CodePen Challenge and front-end portfolio project.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
