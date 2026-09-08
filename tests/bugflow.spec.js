@@ -1,0 +1,4 @@
+import {test,expect} from '@playwright/test';
+test('loads the studio and renders Mermaid',async({page})=>{await page.goto('/');await expect(page.locator('h1')).toContainText(/bug report|raport de eroare/i);await expect(page.locator('#editor-output svg')).toBeVisible()});
+test('switches language and edits a diagram',async({page})=>{await page.goto('/');await page.locator('#lang').click();await expect(page.locator('h1')).toContainText('Viața');await page.locator('#editor-input').fill('flowchart LR\n A-->B');await expect(page.locator('#editor-lines')).toContainText('2')});
+test('Flow Forge supports auto layout and connecting mode',async({page})=>{await page.goto('/');await page.locator('#builder-layout').click();await page.locator('#builder-connect').click();await expect(page.locator('#builder-connect')).toHaveAttribute('aria-pressed','true')});
