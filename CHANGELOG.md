@@ -2,6 +2,17 @@
 
 All notable changes to BUGFLOW are documented here.
 
+## [6.0.0] - 2026-09-08
+
+### Added
+- Visual no-code flow builder with six block shapes and editable connections
+- Bug report, release pipeline, and CRM lead presets
+- Top-down, left-right, bottom-up, and right-left diagram directions
+- Mermaid source apply, copy, and source-to-block synchronization
+- Blueprint and vellum builder surfaces with zoom and fit controls
+- Animated pipeline run, progress pressure meter, and reduced-motion support
+- One-click transfer from the visual builder to the full studio editor
+
 ## [5.0.0] - 2026-09-08
 
 ### Added
