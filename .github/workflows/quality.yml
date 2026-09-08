@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with: {node-version: 22}
       - run: npm install --no-save @playwright/test @axe-core/playwright http-server
       - run: npx playwright install --with-deps chromium
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with: {node-version: 22}
       - run: npm install --no-save @lhci/cli http-server
       - run: npx http-server . -p 4173 -c-1 &
