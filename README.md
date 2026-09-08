@@ -15,6 +15,8 @@ An interactive, accessible Mermaid diagram studio that combines a guided bug-rep
 - Interactive “Life of a Bug Report” decision flow
 - Sequence, state, Gantt, Git Graph, ER, journey, timeline, mind map, class, pie, and quadrant diagrams
 - 12 searchable templates for development, CRM, marketing, planning, and data
+- Visual no-code Flow Forge with block palette, editable nodes, connections, presets, and generated Mermaid source
+- Animated pipeline playback with progress pressure, zoom, fit, direction control, and Blueprint/Vellum themes
 - Live Mermaid editor with debounce, error feedback, undo/redo, formatting, zoom, fit, and fullscreen
 - Multi-project workspace with create, rename, duplicate, delete, import, and JSON backup
 - Local text-to-diagram assistant
