@@ -2,6 +2,17 @@
 
 All notable changes to BUGFLOW are documented here.
 
+## [9.0.0] - 2026-09-08
+
+### Added
+- Production center and Ctrl/Cmd+K command palette
+- Local graph analysis, comments, find/replace, snapshot comparison, and documentation export
+- Smart URL sharing, read-only mode, and fullscreen presentation mode
+- Keyboard navigation and quick label editing for Flow Forge SVG nodes
+- Six new Mermaid starters: Kanban, Sankey, Architecture, Radar, Treemap, Requirement
+- Mobile action dock, diagram grid, color-safe theme, and LaurAi export branding
+- CodeQL scanning, Dependabot, axe accessibility checks, PR template, code of conduct, and roadmap
+
 ## [8.0.0] - 2026-09-08
 
 ### Added
