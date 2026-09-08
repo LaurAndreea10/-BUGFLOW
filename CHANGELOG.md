@@ -2,6 +2,19 @@
 
 All notable changes to BUGFLOW are documented here.
 
+## [7.0.0] - 2026-09-08
+
+### Added
+- Drag-and-drop Flow Forge nodes with persistent layout
+- Project snapshots and restoration history
+- Custom accent and surface theme controls
+- Markdown and JSON exports
+- Editor line counter
+- Online/offline status and in-app PWA installation
+- PWA shortcuts for the editor and Flow Forge
+- Automated GitHub validation workflow
+- Contribution guide, security policy, and issue templates
+
 ## [6.0.0] - 2026-09-08
 
 ### Added
