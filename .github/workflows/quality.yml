@@ -1,0 +1,28 @@
+name: Browser quality
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  browser-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22}
+      - run: npm install --no-save @playwright/test http-server
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22}
+      - run: npm install --no-save @lhci/cli http-server
+      - run: npx http-server . -p 4173 -c-1 &
+      - run: npx wait-on http://127.0.0.1:4173
+      - run: npx lhci autorun --collect.url=http://127.0.0.1:4173 --collect.numberOfRuns=1 --upload.target=temporary-public-storage
