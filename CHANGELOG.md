@@ -2,6 +2,16 @@
 
 All notable changes to BUGFLOW are documented here.
 
+## [6.0.0] - 2026-09-08
+
+### Added
+- Visual no-code Flow Forge builder
+- Process, decision, terminal, database, and data block palette
+- Editable nodes and connections with live Mermaid generation
+- Bug report, release pipeline, and CRM presets
+- Direction controls, synchronized source view, zoom, fit, and animated route playback
+- One-click transfer from Flow Forge to the Studio editor
+
 ## [5.0.0] - 2026-09-08
 
 ### Added
