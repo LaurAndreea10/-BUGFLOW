@@ -16,6 +16,10 @@ An interactive, accessible Mermaid diagram studio that combines a guided bug-rep
 - Sequence, state, Gantt, Git Graph, ER, journey, timeline, mind map, class, pie, and quadrant diagrams
 - 12 searchable templates for development, CRM, marketing, planning, and data
 - Visual no-code Flow Forge with block palette, editable nodes, connections, presets, and generated Mermaid source
+- Drag-and-drop nodes with persistent custom positions
+- Project snapshots with one-click restore and up to 30 saved states
+- Custom accent/surface themes, online status, and in-app PWA installation
+- Markdown and JSON export in addition to the existing formats
 - Animated pipeline playback with progress pressure, zoom, fit, direction control, and Blueprint/Vellum themes
 - Live Mermaid editor with debounce, error feedback, undo/redo, formatting, zoom, fit, and fullscreen
 - Multi-project workspace with create, rename, duplicate, delete, import, and JSON backup
@@ -37,6 +41,9 @@ An interactive, accessible Mermaid diagram studio that combines a guided bug-rep
 ├── icon.svg
 ├── robots.txt
 ├── sitemap.xml
+├── .github/workflows/validate.yml
+├── CONTRIBUTING.md
+├── SECURITY.md
 ├── CHANGELOG.md
 ├── LICENSE
 └── README.md
