@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="v8.css">
+  <link rel="stylesheet" href="v9.css">
 </head>
 <body>
   <a class="skip" href="#flow">Skip to flowchart</a>
@@ -136,13 +137,23 @@ flowchart TD
     D --> B
     C --> E([Ship it])</textarea></div><output id="editor-diagnostic" class="editor-diagnostic" aria-live="polite">No errors</output></div><div class="editor-pane"><div class="editor-label"><span>PREVIEW</span><span id="diagram-status">Ready</span></div><div id="editor-output" aria-live="polite"></div></div></div></div>
       <div class="accessible-summary"><h3>Accessible text view</h3><p id="accessible-description">Generate a clear textual description of the current diagram.</p></div><div class="achievement-row"><span>XP <strong id="xp">0</strong></span><span>Diagrams <strong id="diagram-count">0</strong></span><span>Badge <strong id="badge">Explorer</strong></span></div><p class="hint" data-i18n="hint">Tip: every diagram starts with its keyword: flowchart, sequenceDiagram, stateDiagram-v2, gantt, or gitGraph.</p>
+      <section class="pro-center" id="pro-center" aria-labelledby="pro-title">
+        <div class="pro-heading"><div><p class="eyebrow">Production center · 04</p><h2 id="pro-title">Review, present, and ship.</h2><p>Local-first production tools for analysis, collaboration, accessibility, and export.</p></div><span class="v9-badge">v9</span></div>
+        <div class="pro-grid">
+          <article><h3>Inspect</h3><div class="pro-actions"><button data-pro="analyze">Analyze graph</button><button data-pro="find-replace">Find &amp; replace</button><button data-pro="compare">Compare snapshot</button><button data-pro="docs">Generate docs</button></div></article>
+          <article><h3>Collaborate</h3><div class="pro-actions"><button data-pro="share-code">Copy smart link</button><button data-pro="readonly">Read-only mode</button><button data-pro="comment">Add comment</button><button data-pro="presentation">Presentation</button></div></article>
+          <article><h3>Customize</h3><div class="pro-actions"><button data-pro="grid">Toggle grid</button><button data-pro="colorblind">Color-safe palette</button><button data-pro="brand">Export branding</button><button data-pro="command">Command palette</button></div></article>
+          <article><h3>Quick diagrams</h3><div class="pro-actions"><button data-template-v9="kanban">Kanban</button><button data-template-v9="sankey">Sankey</button><button data-template-v9="architecture">Architecture</button><button data-template-v9="radar">Radar</button><button data-template-v9="treemap">Treemap</button><button data-template-v9="requirement">Requirement</button></div></article>
+        </div>
+        <div class="quality-strip"><span>⌨ Keyboard builder</span><span>◉ Local privacy</span><span>✓ Graph checks</span><span>♿ Accessible presentation</span><span>↗ Portable exports</span></div>
+      </section>
     </section>
   </main>
   <aside class="a11y-panel" id="a11y-panel" hidden aria-labelledby="a11y-title"><div class="a11y-head"><h2 id="a11y-title">Accessibility</h2><button id="a11y-close" aria-label="Close">×</button></div><label>Text size <input id="text-size" type="range" min="90" max="125" value="100"></label><label><input id="contrast" type="checkbox"> High contrast</label><label><input id="simple-font" type="checkbox"> Easy-read font</label><label><input id="motion" type="checkbox"> Reduce motion</label><button id="reset-prefs">Reset preferences</button></aside>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div><div id="pwa-update" class="pwa-update" hidden><span>A new BUGFLOW version is ready.</span><button id="pwa-refresh" type="button">Update now</button></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div><div id="pwa-update" class="pwa-update" hidden><span>A new BUGFLOW version is ready.</span><button id="pwa-refresh" type="button">Update now</button></div><div id="mobile-tools" class="mobile-tools"><button data-mobile="editor">Editor</button><button data-mobile="forge">Forge</button><button data-mobile="run">Run</button><button data-mobile="pro">Tools</button></div>
   <dialog id="ai-dialog"><form method="dialog"><div class="a11y-head"><h2>Text to diagram</h2><button value="cancel" aria-label="Close">×</button></div><p>Separate the steps with commas or arrows. Questions become decisions.</p><textarea id="ai-prompt" rows="7" placeholder="Lead arrives, Is the lead qualified?, Send proposal, Close sale"></textarea><div class="dialog-actions"><button value="cancel">Cancel</button><button value="default" id="generate-diagram">Generate diagram</button></div></form></dialog>
   <dialog id="theme-dialog"><form method="dialog"><div class="a11y-head"><h2>Diagram theme</h2><button value="cancel" aria-label="Close">×</button></div><label>Accent <input id="accent-color" type="color" value="#2864e6"></label><label>Surface <input id="surface-color" type="color" value="#ffffff"></label><label>Diagram direction <select id="default-direction"><option>TD</option><option>LR</option><option>BT</option><option>RL</option></select></label><div class="dialog-actions"><button id="theme-reset" value="default">Reset</button><button id="theme-save" value="default">Save theme</button></div></form></dialog><dialog id="history-dialog"><form method="dialog"><div class="a11y-head"><h2>Project snapshots</h2><button value="cancel">×</button></div><div id="snapshot-list" class="snapshot-list"></div></form></dialog><footer class="shell footer"><span data-i18n="footer">Designed for clarity, built for every screen.</span></footer>
   <noscript><p class="noscript">JavaScript is required for the interactive controls, but the workflow remains available as text in the page source.</p></noscript>
-  <script type="module" src="app.js"></script>
+  <script type="module" src="app.js"></script><script type="module" src="v9.js"></script>
 </body>
 </html>
