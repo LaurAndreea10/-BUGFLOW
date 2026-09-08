@@ -29,6 +29,18 @@ An interactive, accessible Mermaid diagram studio that combines a guided bug-rep
 - English/Romanian interface, light/dark theme, high contrast, text scaling, easy-read font, and reduced motion
 - Local autosave, keyboard shortcuts, XP/badges, and installable offline PWA
 
+## Version 8 highlights
+
+- Click-to-connect handles directly on rendered Flow Forge nodes
+- Dedicated Flow Forge undo/redo history with 60 states
+- Auto layout reset and live mini-map
+- Source line gutter with precise Mermaid error diagnostics
+- Complete project ZIP bundle export and direct print-to-PDF workflow
+- Expanded Romanian interface labels
+- PWA update notification and offline Mermaid module cache
+- Playwright browser tests and Lighthouse CI
+- Social preview artwork and Open Graph metadata
+
 ## Project structure
 
 ```text
