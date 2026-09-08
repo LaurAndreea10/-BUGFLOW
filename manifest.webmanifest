@@ -1,7 +1,7 @@
 {
   "name": "Bugflow Mermaid Studio",
   "short_name": "Bugflow",
-  "description": "Create, simulate, and export accessible Mermaid diagrams.",
+  "description": "Design, connect, validate, and export Mermaid diagrams in a visual offline studio.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#0b1020",
@@ -33,6 +33,19 @@
       "short_name": "Forge",
       "description": "Open the visual flow builder",
       "url": "./#visual-builder",
+      "icons": [
+        {
+          "src": "icon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Open live editor",
+      "short_name": "Editor",
+      "description": "Edit Mermaid source with line-aware diagnostics",
+      "url": "./#studio-editor",
       "icons": [
         {
           "src": "icon.svg",
