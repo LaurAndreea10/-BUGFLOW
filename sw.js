@@ -1,5 +1,5 @@
-const CACHE='bugflow-v8';
-const CORE=['./','./index.html','./style.css','./v8.css','./app.js','./manifest.webmanifest','./icon.svg','./og-image.svg'];
+const CACHE='bugflow-v9';
+const CORE=['./','./index.html','./style.css','./v8.css','./v9.css','./app.js','./v9.js','./manifest.webmanifest','./icon.svg','./og-image.svg'];
 const OPTIONAL=['https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(async cache=>{await cache.addAll(CORE);await Promise.allSettled(OPTIONAL.map(url=>cache.add(url)))})));
 self.addEventListener('activate',event=>event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))),self.clients.claim()])));
