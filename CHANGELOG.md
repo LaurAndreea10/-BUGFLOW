@@ -2,6 +2,18 @@
 
 All notable changes to BUGFLOW are documented here.
 
+## [8.0.0] - 2026-09-08
+
+### Added
+- Direct visual node-to-node connection mode in Flow Forge
+- Flow Forge undo/redo history, auto layout, and mini-map
+- Line-number gutter and line-aware Mermaid diagnostics
+- ZIP project bundles containing Mermaid, SVG, JSON, and README files
+- Expanded Romanian controls and status messages
+- PWA update banner, immediate activation, and offline Mermaid caching
+- Playwright end-to-end tests and Lighthouse CI
+- Open Graph social preview artwork and metadata
+
 ## [7.0.0] - 2026-09-08
 
 ### Added
