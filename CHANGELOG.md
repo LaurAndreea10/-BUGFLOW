@@ -2,6 +2,30 @@
 
 All notable changes to BUGFLOW are documented here.
 
+## [10.0.0] - 2026-09-12
+
+### Security
+- Pinned Mermaid 11.4.1 in app and offline cache.
+- Enabled strict Mermaid security and added source validation for editor, imports and smart-links.
+- Added Content Security Policy and regression coverage for unsafe shared diagrams.
+
+### Performance and reliability
+- Replaced recursive cycle detection with iterative O(V+E) three-state DFS.
+- Consolidated project persistence behind a cancellable debounce.
+- Made PNG/WebP export viewBox-aware with scale, transparency and safety limits.
+- Removed dependency on Mermaid-generated ID patterns in flow highlighting and builder editing.
+
+### Architecture
+- Extracted security, graph analysis, export, projects, i18n and editor helpers into ES modules.
+- Documented the boundary between app.js and v9.js.
+- Added Large Graph isolate/show-all controls and complexity reporting.
+
+### PWA and accessibility
+- Added dedicated 512×512 maskable PNG, deterministic v10 cache and explicit offline page.
+- Aligned theme colors across HTML, manifest and JavaScript.
+- Re-enabled color-contrast auditing and expanded Playwright security, performance, export and manifest tests.
+- Updated diagram coverage copy from four examples to 12+ families.
+
 ## [9.0.0] - 2026-09-08
 
 ### Added
