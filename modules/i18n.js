@@ -1,0 +1,2 @@
+export function mergeTranslations(dictionary,language,entries){dictionary[language]??={};Object.assign(dictionary[language],entries);return dictionary[language]}
+export function translated(language,ro,en){return language==='ro'?ro:en}
