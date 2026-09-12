@@ -4,14 +4,20 @@
   "description": "A local-first visual Mermaid studio for building, reviewing, presenting, and exporting production diagrams.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#0b1020",
-  "theme_color": "#2864e6",
+  "background_color": "#071226",
+  "theme_color": "#071226",
   "icons": [
     {
       "src": "icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "shortcuts": [
