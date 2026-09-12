@@ -97,6 +97,43 @@ BUGFLOW uses semantic controls, visible focus states, a skip link, ARIA live reg
 
 Projects, preferences, drafts, and progress are stored locally in the browser. No account or analytics service is required.
 
+## Security & stability baseline (v10)
+
+- Mermaid is pinned to `11.4.1` in both the application and service worker.
+- Mermaid runs with `securityLevel: 'strict'`.
+- Editor, file-import, and smart-link sources are size-limited and reject executable markup and unsafe protocols.
+- Graph cycle detection uses an iterative three-state DFS in O(V+E).
+- Project persistence uses a cancellable debounce and flushes on `pagehide`.
+- PNG and WebP exports derive dimensions from the SVG `viewBox`, support 1×/2×/4×, transparency, and a 40 MP safety limit.
+- The accessibility test includes color contrast rather than disabling it.
+- The PWA has an explicit offline page and a dedicated 512×512 maskable PNG.
+
+## Architecture
+
+The app remains dependency-light, but responsibilities are explicit:
+
+| File | Responsibility |
+|---|---|
+| `app.js` | Application orchestration, editor UI, project and export actions |
+| `v9.js` | Pro tools, smart links, builder enhancements, presentation features |
+| `modules/security.js` | Source validation and safe smart-link decoding |
+| `modules/graph-analysis.js` | Linear-time graph analysis and health reports |
+| `modules/export.js` | SVG sizing and robust raster export |
+| `modules/projects.js` | Reusable debounce and persistence scheduling |
+| `modules/i18n.js` | Translation composition helpers |
+| `modules/editor.js` | Stable rendered-node lookup using Mermaid data attributes |
+| `sw.js` | Deterministic offline cache and update lifecycle |
+
+The split is intentionally incremental: existing behavior remains traceable while fragile responsibilities move behind small modules.
+
+## Diagram coverage
+
+BUGFLOW demonstrates and supports **12+ Mermaid diagram families**, including flowcharts, sequence, state, Gantt, Git Graph, class, ER, journey, mindmap, timeline, quadrant, XY, Sankey, block, architecture, packet, Kanban, requirement, pie and C4 variants.
+
+## Large Graph Mode
+
+Node search, isolate/show-all controls, minimap, zoom, fit, complexity reporting, a 100 KB source ceiling and iterative cycle detection keep large diagrams reviewable without recursive stack growth.
+
 ## Version history
 
 See [CHANGELOG.md](CHANGELOG.md).
