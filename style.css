@@ -12,3 +12,8 @@
 .network-status{font:700 .68rem var(--mono);color:var(--green);padding:.45rem .65rem}.network-status.offline{color:var(--amber)}#theme-dialog label{display:flex;justify-content:space-between;align-items:center;padding:.75rem 0;border-bottom:1px solid var(--line)}.snapshot-list{display:grid;gap:.55rem;max-height:420px;overflow:auto}.snapshot-list button{display:flex;justify-content:space-between;gap:1rem;text-align:left;padding:.8rem;border:1px solid var(--line);border-radius:.7rem;background:var(--surface2);color:var(--ink);cursor:pointer}.snapshot-list small{color:var(--soft)}#editor-lines{font-weight:700;color:var(--blue)}#builder-canvas .node{touch-action:none}.builder-stage:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}@media(max-width:560px){.network-status{display:none}}
 
 [data-theme="light"] #editor-lines{color:#174ea6}[data-theme="light"] #save-state,[data-theme="light"] #diagram-status{color:#46536a}[data-theme="light"] .editor-diagnostic{color:#006b4f}
+
+/* WCAG AA: status text remains legible even where compact UI previously reduced opacity. */
+[data-theme="light"] #editor-lines{color:#123f8c!important;opacity:1!important}
+[data-theme="light"] #save-state,[data-theme="light"] #diagram-status{color:#364152!important;opacity:1!important}
+[data-theme="light"] #editor-diagnostic{color:#005f46!important;opacity:1!important}
