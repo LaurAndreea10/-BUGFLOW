@@ -1,5 +1,5 @@
 const NODE=/^\s*([A-Za-z][\w-]*)\s*(?:\[|\(|\{|>)/gm;
-const EDGE=/([A-Za-z][\w-]*)\s*(?:-->|---|-.->|==>)\s*(?:\|[^|]*\|\s*)?([A-Za-z][\w-]*)/g;
+const EDGE=/([A-Za-z][\w-]*)(?:\s*(?:\[[^\]]*\]|\([^)]*\)|\{[^}]*\}|>[^<\n]*))?\s*(?:-->|---|-\.->|==>)\s*(?:\|[^|]*\|\s*)?([A-Za-z][\w-]*)/g;
 export function analyzeGraph(source){
  const ids=new Set(),targets=new Set(),starts=new Set(),edges=[];let m;
  while((m=NODE.exec(source)))ids.add(m[1]);
