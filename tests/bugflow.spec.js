@@ -15,7 +15,7 @@ test('pins Mermaid and blocks unsafe smart links',async({page,request})=>{
  await page.goto('/#diagram='+hash);
  await page.waitForTimeout(1000);
  expect(await page.evaluate(()=>window.__xssExecuted||false)).toBe(false);
- expect(page.locator('#editor-input')).not.toHaveValue(payload);
+ expect(await page.locator('#editor-input').inputValue()).not.toBe(payload);
 });
 test('analyzes a large cyclic graph in linear time',async({page})=>{
  await page.goto('/');
