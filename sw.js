@@ -1,4 +1,4 @@
-const CACHE='bugflow-v10';
+const CACHE='bugflow-v10.0.1';
 const CORE=['./','./index.html','./offline.html','./style.css','./v8.css','./v9.css','./app.js','./v9.js','./modules/security.js','./modules/graph-analysis.js','./modules/export.js','./modules/projects.js','./modules/i18n.js','./modules/editor.js','./modules/graph-client.js','./workers/graph-worker.js','./manifest.webmanifest','./icon.svg','./icon-maskable-512.png','./og-image.svg'];
 const OPTIONAL=['https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(async cache=>{await cache.addAll(CORE);await Promise.allSettled(OPTIONAL.map(url=>cache.add(url)))})));
