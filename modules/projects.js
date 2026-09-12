@@ -1,0 +1,1 @@
+export function debounce(fn,delay=400){let timer;const wrapped=(...args)=>{clearTimeout(timer);timer=setTimeout(()=>fn(...args),delay)};wrapped.cancel=()=>clearTimeout(timer);wrapped.flush=(...args)=>{clearTimeout(timer);return fn(...args)};return wrapped}
